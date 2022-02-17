@@ -17,8 +17,8 @@ const Home: NextPage = () => {
   };
 
   return (
-    <VideoHero bg={vid.light} darkBg={vid.dark}>
-      <div className="z-30 absolute h-full flex flex-col top-36 -mt-4 lg:justify-center lg:top-auto lg:mt-auto">
+    <ImageHero bg={img.light} darkBg={img.dark}>
+      <div className="z-30 absolute h-auto lg:h-full flex flex-col top-36 -mt-4 lg:justify-center lg:top-auto lg:mt-auto">
         <Header variant="h1" className="mb-4">
           {headingText}
         </Header>
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
           <polygon points="50,0 100,0 50,100 0,100"></polygon>
         </svg>
       </div>
-    </VideoHero>
+    </ImageHero>
   );
 };
 

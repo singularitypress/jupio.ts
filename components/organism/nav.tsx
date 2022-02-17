@@ -14,7 +14,7 @@ export const Nav = ({ logo, items }: IProps) => {
   const transition = "transition ease-in duration-200";
 
   return (
-    <nav className="z-50 fixed flex justify-center py-5 px-4 xl:px-0 drop-shadow-lg backdrop-blur-md top-0 left-0 w-screen border-b bg-theme-accent/25 border-gray-300 dark:bg-theme-dp04/25 dark:border-theme-dp08">
+    <nav className="z-50 fixed flex justify-center py-5 px-4 xl:px-0 drop-shadow-lg backdrop-blur-md bottom-0 lg:bottom-auto lg:top-0 left-0 w-screen border-b bg-theme-accent/25 border-gray-300 dark:bg-theme-dp04/25 dark:border-theme-dp08">
       <Container>
         <div className="flex flex-row place-content-between">
           {logo}
