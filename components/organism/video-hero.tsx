@@ -19,12 +19,17 @@ export const VideoHero = ({ children, bg, darkBg, blur = true }: IProps) => {
         <div className="container">{children}</div>
       </div>
       {blurOverlay}
-      <video className="w-screen dark:hidden" src={bg} autoPlay loop />
+      <video
+        className="w-screen dark:hidden"
+        src={bg}
+        autoPlay={true}
+        loop={true}
+      />
       <video
         className="w-screen hidden dark:block"
         src={darkBg}
-        autoPlay
-        loop
+        autoPlay={true}
+        loop={true}
       />
     </div>
   );
