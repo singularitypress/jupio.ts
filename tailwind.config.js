@@ -18,6 +18,14 @@ module.exports = {
         "theme-dp24": "#373737",
         "theme-accent": "#faf9f5",
       },
+      screens: {
+        "min-hd": {
+          raw: "(min-aspect-ratio: 16/9)",
+        },
+        "max-hd": {
+          raw: "(max-aspect-ratio: 16/9)",
+        },
+      },
     },
   },
   plugins: [],

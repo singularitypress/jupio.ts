@@ -4,7 +4,8 @@ import { ImageHero, VideoHero } from "@components/organism";
 
 const Home: NextPage = () => {
   const headingText = "Jupio Labs";
-  const bodyText = "Building the future";
+  const bodyText =
+    "Unlocking the potential of our clients, open source, and our staff.";
 
   const img = {
     light: "bg-[url('https://i.imgur.com/csNmS00.png')]",
@@ -12,33 +13,22 @@ const Home: NextPage = () => {
   };
 
   const vid = {
-    light: "https://i.imgur.com/atGceeC.mp4",
-    dark: "https://i.imgur.com/MM6JC3U.mp4",
+    light: "https://i.imgur.com/E05jikg.mp4",
+    dark: "https://i.imgur.com/Oa5nSox.mp4",
   };
 
   return (
-    <ImageHero bg={img.light} darkBg={img.dark}>
-      <div className="z-30 absolute h-auto lg:h-full flex flex-col top-36 -mt-4 lg:justify-center lg:top-auto lg:mt-auto">
-        <Header variant="h1" className="mb-4">
+    <VideoHero bg={vid.light} darkBg={vid.dark} blur>
+      <div className="z-30 h-full flex flex-col justify-center top-auto mt-auto items-center">
+        <Header variant="h1" className="text-8xl">
           {headingText}
         </Header>
-        <p className="mb-8">{bodyText}</p>
+        <p className="mb-8 mt-8 text-2xl">{bodyText}</p>
         <Button element="link" href="/work">
           Our Work
         </Button>
       </div>
-      <div className="absolute w-full h-full top-0 left-0 flex">
-        <div className="w-full h-1/2 lg:w-1/3 lg:h-full bg-theme-accent dark:bg-theme-base z-20"></div>
-        <svg
-          className="hidden lg:block h-full w-48 transform -translate-x-1/2 fill-theme-accent dark:fill-theme-base drop-shadow-xl"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <polygon points="50,0 100,0 50,100 0,100"></polygon>
-        </svg>
-      </div>
-    </ImageHero>
+    </VideoHero>
   );
 };
 

@@ -7,6 +7,7 @@ interface IProps {
   items: {
     label: string;
     href: string;
+    type?: "button" | "link";
   }[];
 }
 
@@ -18,16 +19,22 @@ export const Nav = ({ logo, items }: IProps) => {
       <Container>
         <div className="flex flex-row place-content-between">
           {logo}
-          <ul>
-            {items.map(({ label, href }) => (
+          <ul className="flex flex-row place-content-between">
+            {items.map(({ label, href, type = "link" }) => (
               <li key={href}>
-                <Link href={href}>
-                  <a
-                    className={`${transition} rounded-fill px-4 py-2 rounded-full font-bold border-2 bg-theme-base border-theme-base text-theme-accent hover:bg-transparent hover:text-theme-base dark:bg-theme-accent dark:border-theme-accent dark:text-theme-dp04 dark:hover:text-theme-accent`}
-                  >
-                    {label}
-                  </a>
-                </Link>
+                {type === "link" ? (
+                  <Link href={href}>
+                    <a className={`${transition} ml-8 font-bold`}>{label}</a>
+                  </Link>
+                ) : (
+                  <Link href={href}>
+                    <a
+                      className={`${transition} ml-8 rounded-fill px-4 py-2 rounded-full font-bold border-2 bg-theme-base border-theme-base text-theme-accent hover:bg-transparent hover:text-theme-base dark:bg-theme-accent dark:border-theme-accent dark:text-theme-dp04 dark:hover:text-theme-accent`}
+                    >
+                      {label}
+                    </a>
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
