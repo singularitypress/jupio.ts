@@ -1,7 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "./variables";
 
 @media (prefers-color-scheme: dark) {
-  body {
+  html {
     background-color: $theme-base;
     color: $theme-accent;
   }

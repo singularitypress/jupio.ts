@@ -24,7 +24,11 @@ export const Nav = ({ logo, items }: IProps) => {
               <li key={href}>
                 {type === "link" ? (
                   <Link href={href}>
-                    <a className={`${transition} ml-8 font-bold`}>{label}</a>
+                    <a
+                      className={`${transition} hover:border-b-2 border-b-transparent hover:border-b-theme-accent ml-8 font-bold`}
+                    >
+                      {label}
+                    </a>
                   </Link>
                 ) : (
                   <Link href={href}>
