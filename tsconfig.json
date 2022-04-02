@@ -20,14 +20,11 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@components/atomic": [
-        "./components/atomic"
+      "@components/*": [
+        "./components/*"
       ],
-      "@components/molecules": [
-        "./components/molecules"
-      ],
-      "@components/organism": [
-        "./components/organism"
+      "@content": [
+        "./content"
       ]
     }
   },

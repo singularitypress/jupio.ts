@@ -1,12 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 
 interface IProps {
   variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   className?: string;
-  children: JSX.Element | JSX.Element[] | string;
 }
 
-export const Header = ({ variant, className = "", children }: IProps) => {
+export const Header: FC<IProps> = ({ variant, className = "", children }) => {
   const headers = {
     h1: <h1 className={`text-6xl font-bold ${className}`}>{children}</h1>,
     h2: <h2 className={`text-5xl font-bold ${className}`}>{children}</h2>,

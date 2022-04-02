@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 
 interface IProps {
-  children: JSX.Element | JSX.Element[] | string;
+  className?: string;
 }
 
-export const Container = ({ children }: IProps) => {
-  return <div className="container">{children}</div>;
+export const Container: FC<IProps> = ({ children, className = "" }) => {
+  return <div className={`container w-full ${className}`}>{children}</div>;
 };

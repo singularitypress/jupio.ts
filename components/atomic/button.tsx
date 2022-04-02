@@ -1,22 +1,21 @@
 import Link from "next/link";
-import React, { MouseEvent, useState } from "react";
+import React, { FC, MouseEvent } from "react";
 
 interface IProps {
   onClick?: (e?: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => void;
   className?: string;
   href?: string;
-  children: JSX.Element | JSX.Element[] | string;
   element: "button" | "link";
   type?: "primary" | "secondary";
 }
 
-export const Button = ({
+export const Button: FC<IProps> = ({
   onClick,
   className = "",
   href = "",
   children,
   element,
-}: IProps) => {
+}) => {
   const transition = "transition ease-in duration-200";
 
   const elements = {

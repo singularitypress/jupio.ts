@@ -1,29 +1,9 @@
-import { Container, Header } from "@components/atomic";
+import { Container, Header, Link } from "@components/atomic";
+import { FOUNDERS } from "@content";
 import React, { NextPage } from "next";
 import Head from "next/head";
 
 const About: NextPage = () => {
-  const founders = [
-    {
-      img: "https://media-exp1.licdn.com/dms/image/C4E03AQF_tt9oFddy5w/profile-displayphoto-shrink_800_800/0/1575602808814?e=1652918400&v=beta&t=lvBmUdw6Zrpj49xiHukd2M1SCOXUtbija-uxCRLJRSk",
-      name: "Jay Pandya",
-      socials: {
-        linkedin: "https://linkedin.com/in/jaypandya",
-        github: "https://github.com/singularityperss",
-      },
-    },
-    // {
-    //   img: "",
-    //   name: "",
-    //   companies: ["", ""],
-    // },
-    // {
-    //   img: "",
-    //   name: "",
-    //   companies: ["", ""],
-    // },
-  ];
-
   return (
     <>
       <Head>
@@ -36,35 +16,41 @@ const About: NextPage = () => {
           referrerPolicy="no-referrer"
         />
       </Head>
-      <div className="mt-24">
-        <Container>
-          <Header variant="h1" className="text-6x1 text-center mb-12">
-            About Us
-          </Header>
-          <Header variant="h2" className="text-center mb-12">
-            Founders
-          </Header>
-          <div className="grid grid-cols-4 gap-4">
-            {founders.map(({ img, name, socials }) => (
-              <div key={name} className="flex flex-col items-center">
-                <img
-                  src={img}
-                  className="rounded-full obj*ect-cover w-48 h-48 grayscale mb-8"
-                />
-                <Header variant="h3" className="mb-8">
-                  {name}
-                </Header>
-                {Object.keys(socials).map((icon) => (
-                  <div key={icon} className="grid grid-cols-2 gap-4">
-                    <i className={`fa-brands fa-${icon}`}></i>
-                    <div>{socials[icon]}</div>
+      <Container className="mt-24">
+        <div className="grid grid-cols-12 gap-6 w-full">
+          {FOUNDERS.map(({ name, company: { title, company }, contact }) => (
+            <div key={name} className="flex flex-col items-center col-span-4">
+              <div className="bg-gradient-to-br from-indigo-500 to-sky-500 w-full h-64 z-10 rounded-3xl relative overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+                <div className="absolute bottom-0 right-0 bg-theme-accent bg-opacity-50 dark:bg-theme-base dark:bg-opacity-50 h-full w-4/5 rounded-tl-full rounded-br-3xl">
+                  <div className="bottom-8 right-0 mr-8 absolute">
+                    <Header variant="h3" className="mb-4">
+                      {name}
+                    </Header>
+                    <p className="mb-2">
+                      {title} - <em>{company}</em>
+                    </p>
+                    <ul className="flex">
+                      {Object.keys(contact).map((key) => (
+                        <li key={key} className="mr-4">
+                          <Link
+                            external={
+                              !!(key === "LinkedIn" || key === "Github")
+                            }
+                            email={!!(key === "Email")}
+                            href={(contact as any)[key]}
+                          >
+                            {key}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                ))}
+                </div>
               </div>
-            ))}
-          </div>
-        </Container>
-      </div>
+            </div>
+          ))}
+        </div>
+      </Container>
     </>
   );
 };
