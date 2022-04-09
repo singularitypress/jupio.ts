@@ -23,6 +23,18 @@ export const FOUNDERS = [
     },
   },
   {
+    name: "Kassim Wais",
+    company: {
+      title: "Project Manager",
+      company: "Ubisoft",
+    },
+    contact: {
+      LinkedIn: "https://www.linkedin.com/in/kassim-wais-b5135125/",
+      Github: "https://github.com/kassimwais",
+      Email: "waiskassim@gmail.com",
+    },
+  },
+  {
     name: "Sushil Tailor",
     company: {
       title: "Senior Software Engineer",

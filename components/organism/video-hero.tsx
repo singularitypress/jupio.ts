@@ -1,20 +1,20 @@
-import React, { useRef } from "react";
+import { Container } from "@components/atomic";
+import React, { FC, useRef } from "react";
 
 interface IProps {
-  children: JSX.Element | JSX.Element[] | string;
   bg: string;
   darkBg: string;
   blur?: boolean;
   overlay?: boolean;
 }
 
-export const VideoHero = ({
+export const VideoHero: FC<IProps> = ({
   children,
   bg,
   darkBg,
   blur = true,
   overlay = true,
-}: IProps) => {
+}) => {
   const lightVideo = useRef<HTMLVideoElement>(null);
   const darkVideo = useRef<HTMLVideoElement>(null);
 
@@ -25,7 +25,7 @@ export const VideoHero = ({
   return (
     <div className="w-screen h-screen bg-cover relative overflow-hidden">
       <div className="absolute z-20 w-full h-full flex justify-center px-4 xl:px-0">
-        <div className="container">{children}</div>
+        <Container>{children}</Container>
       </div>
       <div
         className={`absolute flex flex-col justify-center h-full z-10 items-start w-full ${blurClasses} ${overlayClasses} ${opacity}`}

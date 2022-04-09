@@ -22,7 +22,7 @@ export const Button: FC<IProps> = ({
     link: (
       <Link href={href}>
         <a
-          className={`${className} ${transition} w-fit px-6 py-3 rounded-xl font-bold bg-sky-500 text-theme-accent hover:bg-indigo-500`}
+          className={`${className} ${transition} w-fit px-6 py-3 rounded-full font-bold bg-sky-500 text-theme-accent hover:bg-indigo-500`}
         >
           {children}
         </a>
@@ -30,7 +30,7 @@ export const Button: FC<IProps> = ({
     ),
     button: (
       <button
-        className={`${className} ${transition} px-6 py-3 rounded-xl font-bold bg-sky-500 text-theme-accent hover:bg-indigo-500`}
+        className={`${className} ${transition} px-6 py-3 rounded-full font-bold bg-sky-500 text-theme-accent hover:bg-indigo-500`}
         onClick={onClick}
       >
         {children}
