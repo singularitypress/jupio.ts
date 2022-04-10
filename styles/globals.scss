@@ -6,46 +6,14 @@
 
 @import "./variables";
 
-@media (prefers-color-scheme: dark) {
-  html {
+html {
+  @media (prefers-color-scheme: dark) {
     background-color: $theme-base;
     color: $theme-accent;
   }
-}
 
-#__next {
-  display: flex;
-  justify-content: center;
-}
-
-@font-face {
-  font-family: "NIMBY-West";
-  font-style: normal;
-  font-weight: 300;
-  src: url("/fonts/nimby-west/NIMBY-West-Display-Light.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "NIMBY-West";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/nimby-west/NIMBY-West-Display-Regular.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "NIMBY-West";
-  font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/nimby-west/NIMBY-West-Display-Bold.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "NIMBY-West";
-  font-style: normal;
-  font-weight: 900;
-  src: url("/fonts/nimby-west/NIMBY-West-Display-Black.otf") format("opentype");
-}
-
-h1, h2, h3 {
-  font-family: "NIMBY-West";
+  font-family: "Inter", sans-serif;
+  @supports (font-variation-settings: normal) {
+    font-family: "Inter var", sans-serif;
+  }
 }

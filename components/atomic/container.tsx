@@ -5,5 +5,7 @@ interface IProps {
 }
 
 export const Container: FC<IProps> = ({ children, className = "" }) => {
-  return <div className={`container w-full ${className}`}>{children}</div>;
+  return (
+    <div className={`container mx-auto w-full ${className}`}>{children}</div>
+  );
 };
