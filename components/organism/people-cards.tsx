@@ -41,10 +41,11 @@ export const PeopleCards: FC<IProps> = ({ people }) => {
             className="card mb-16 md:mb-0 flex flex-col justify-between transition-all -translate-y-10 opacity-0 duration-500"
           >
             <div>
-              <p className="mb-4">
+              <p className="mb-4 border-t border-theme-base/50 dark:border-theme-accent/50">
+                <div className="pb-2 pt-4">
+                  <strong>{type}</strong>
+                </div>
                 <strong className="text-2xl">{name}</strong>
-                <br />
-                <strong>{type}</strong>
               </p>
               <p className="mb-4">
                 <em>{title}</em> @ {company}

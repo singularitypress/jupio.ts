@@ -56,7 +56,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </Container>
-        <div className="absolute h-screen w-screen md:w-1/2 bg-green-500 dark:bg-green-900 -z-10"></div>
+        <div className="absolute h-screen w-screen md:w-1/2 bg-green-500 dark:bg-green-900/50 -z-10"></div>
       </div>
     </>
   );

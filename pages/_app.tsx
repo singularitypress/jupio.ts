@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import "../styles/globals.scss";
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Nav
@@ -18,10 +18,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             label: "About Us",
             href: "/about-us",
           },
-          // {
-          //   label: "Our Work",
-          //   href: "/our-work",
-          // },
+          {
+            label: "Our Work",
+            href: "/our-work",
+          },
           {
             label: "Contact Us",
             href: "mailto:hello@jaypandya.co",
@@ -32,6 +32,4 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </>
   );
-}
-
-export default MyApp;
+};

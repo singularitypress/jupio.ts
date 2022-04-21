@@ -195,7 +195,7 @@ export default () => {
           </p>
         </div>
       </Container>
-      <div className="bg-sky-300 dark:bg-blue-900 min-h-screen py-16">
+      <div className="bg-sky-300 dark:bg-blue-900/50 min-h-screen py-16">
         <Container>
           <Header variant="h2" className="mb-8">
             Currently

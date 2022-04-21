@@ -44,6 +44,7 @@ export const Nav = ({ logo, items }: IProps) => {
                     <Link href={href}>
                       <a
                         className={`${transition} hover:border-b-2 border-b-transparent hover:border-b-theme-base dark:hover:border-b-theme-accent md:ml-8 font-bold`}
+                        onClick={() => setOpen(false)}
                       >
                         {label}
                       </a>
@@ -52,6 +53,7 @@ export const Nav = ({ logo, items }: IProps) => {
                     <Link href={href}>
                       <a
                         className={`${transition} md:ml-8 rounded-fill px-4 py-2 rounded-full font-bold border-2 bg-theme-base border-theme-base text-theme-accent hover:bg-transparent hover:text-theme-base dark:bg-theme-accent dark:border-theme-accent dark:text-theme-dp04 dark:hover:text-theme-accent`}
+                        onClick={() => setOpen(false)}
                       >
                         {label}
                       </a>
