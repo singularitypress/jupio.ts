@@ -88,12 +88,13 @@ export default () => {
       misc: "https://scholar.google.ca/citations?user=zbmE0IIAAAAJ",
       bio: (
         <>
-          Expert in Python and MATLAB. Some knowledge in C, R, SQL. Fluent
-          communicator in English, French, and Cantonese Chinese. Experience
-          with data visualization, SOTA pretrained ML models (Hugging Face,
-          PyTorch-Lightning), GitHub/GitLab version control, REST APIs, cloud
-          data storage (Amazon S3, MinIO), Docker containerization. All under
-          Agile methodology.
+          I'm a full-stack data and ML scientist with a PhD in physics and years
+          of experience in leading applied research projects and building
+          end-to-end ML solutions in Python (AWS, PyTorch, MLFLow, Prefect).
+          I've co-authored papers in several high-impact journals and developed
+          tools for the US DoD DARPA and CA DND DRDC to detect/analyze/monitor
+          influence campaigns in social media. Secret Level II security
+          clearance.
         </>
       ),
     },
@@ -166,7 +167,7 @@ export default () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       Array.prototype.slice
-        .call(document.querySelectorAll(".card"))
+        .call(document.querySelectorAll(".load"))
         .forEach((item, index) => {
           setTimeout(() => {
             item.classList.remove("opacity-0");
@@ -181,7 +182,7 @@ export default () => {
       <Head>
         <title>About Us</title>
       </Head>
-      <Container className="pb-16 pt-32">
+      <Container className="pb-16 pt-32 load transition-all -translate-y-10 opacity-0 duration-500">
         <Header variant="h1" className="mb-8">
           About Us
         </Header>
@@ -197,12 +198,18 @@ export default () => {
       </Container>
       <div className="bg-sky-300 dark:bg-blue-900/50 min-h-screen py-16">
         <Container>
-          <Header variant="h2" className="mb-8">
+          <Header
+            variant="h2"
+            className="mb-8 load transition-all -translate-y-10 opacity-0 duration-500"
+          >
             Currently
           </Header>
           <PeopleCards people={present} />
 
-          <Header variant="h2" className="mb-8">
+          <Header
+            variant="h2"
+            className="mb-8 load transition-all -translate-y-10 opacity-0 duration-500"
+          >
             Previously
           </Header>
           <PeopleCards people={past} />

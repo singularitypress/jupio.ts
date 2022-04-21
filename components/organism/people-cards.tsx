@@ -38,13 +38,13 @@ export const PeopleCards: FC<IProps> = ({ people }) => {
         }) => (
           <div
             key={name}
-            className="card mb-16 md:mb-0 flex flex-col justify-between transition-all -translate-y-10 opacity-0 duration-500"
+            className="mb-16 md:mb-0 flex flex-col justify-between load transition-all -translate-y-10 opacity-0 duration-500"
           >
             <div>
               <p className="mb-4 border-t border-theme-base/50 dark:border-theme-accent/50">
-                <div className="pb-2 pt-4">
+                <span className="pb-2 pt-4 block">
                   <strong>{type}</strong>
-                </div>
+                </span>
                 <strong className="text-2xl">{name}</strong>
               </p>
               <p className="mb-4">
