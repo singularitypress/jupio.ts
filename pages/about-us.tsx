@@ -78,13 +78,34 @@ export default () => {
       ),
     },
     {
+      name: "Nelson Liu",
+      type: "Consultant",
+      title: "Research Scientist, AI and Data Science",
+      company: "Uncharted Software",
+      linkedIn: "https://www.linkedin.com/in/laichungliu/",
+      github: "https://github.com/liunelson",
+      email: "liu.nelson@outlook.com",
+      misc: "https://scholar.google.ca/citations?user=zbmE0IIAAAAJ",
+      bio: (
+        <>
+          Expert in Python and MATLAB. Some knowledge in C, R, SQL. Fluent
+          communicator in English, French, and Cantonese Chinese. Experience
+          with data visualization, SOTA pretrained ML models (Hugging Face,
+          PyTorch-Lightning), GitHub/GitLab version control, REST APIs, cloud
+          data storage (Amazon S3, MinIO), Docker containerization. All under
+          Agile methodology.
+        </>
+      ),
+    },
+    {
       name: "Amy Pandya",
       type: "Intern/ Apprentice",
       title: "Intern",
       company: "Jupio Labs",
       linkedIn: "https://www.linkedin.com/in/amy-pandya-03282211b/",
       github: "https://github.com/amypands",
-      email: "https://github.com/amypands",
+      email: "amykpandya@gmail.com",
+      misc: "https://amypandya.vercel.app/",
       bio: (
         <>
           I'm a web developer based in Toronto and am looking to work with other

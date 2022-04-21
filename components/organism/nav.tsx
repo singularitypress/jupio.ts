@@ -19,10 +19,6 @@ export const Nav = ({ logo, items }: IProps) => {
   const closeIcon = <i className="fa-solid fa-xmark text-2xl"></i>;
   const openIcon = <i className="fa-solid fa-bars"></i>;
 
-  useEffect(() => {
-    console.log(open);
-  }, [open]);
-
   return (
     <>
       <button
@@ -36,10 +32,10 @@ export const Nav = ({ logo, items }: IProps) => {
       <nav
         className={`z-40 transition-all duration-500 md:transition-none ${
           open ? "-translate-y-0" : "-translate-y-full"
-        } md:translate-y-0 h-screen md:h-auto fixed flex justify-center py-5 px-4 xl:px-0 top-0 left-0 w-screen bg-theme-base dark:bg-theme-accent md:bg-theme-accent md:dark:bg-theme-base`}
+        } md:translate-y-0 h-screen md:h-auto fixed flex justify-center py-5 px-4 xl:px-0 top-0 left-0 w-screen bg-theme-accent dark:bg-theme-base`}
       >
         <Container>
-          <div className="flex flex-col md:flex-row place-content-between">
+          <div className="flex flex-col md:flex-row h-full justify-center md:place-content-between">
             {logo}
             <ul className="flex flex-col md:flex-row place-content-between mt-8 md:mt-0">
               {items.map(({ label, href, type = "link" }) => (
