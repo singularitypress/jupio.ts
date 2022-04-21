@@ -36,7 +36,7 @@ export const Nav = ({ logo, items }: IProps) => {
       <nav
         className={`z-40 transition-all duration-500 md:transition-none ${
           open ? "-translate-y-0" : "-translate-y-full"
-        } md:translate-y-0 h-screen md:h-auto fixed flex justify-center py-5 px-4 xl:px-0 drop-shadow-lg backdrop-blur-md top-0 left-0 w-screen md:border-b bg-theme-accent/90 dark:bg-theme-dp04/90 md:bg-theme-accent/25 md:border-gray-300 md:dark:bg-theme-dp04/25 md:dark:border-theme-dp08`}
+        } md:translate-y-0 h-screen md:h-auto fixed flex justify-center py-5 px-4 xl:px-0 top-0 left-0 w-screen bg-theme-base dark:bg-theme-accent md:bg-theme-accent md:dark:bg-theme-base`}
       >
         <Container>
           <div className="flex flex-col md:flex-row place-content-between">
@@ -47,7 +47,7 @@ export const Nav = ({ logo, items }: IProps) => {
                   {type === "link" ? (
                     <Link href={href}>
                       <a
-                        className={`${transition} hover:border-b-2 border-b-transparent hover:border-b-theme-accent md:ml-8 font-bold`}
+                        className={`${transition} hover:border-b-2 border-b-transparent hover:border-b-theme-base dark:hover:border-b-theme-accent md:ml-8 font-bold`}
                       >
                         {label}
                       </a>
