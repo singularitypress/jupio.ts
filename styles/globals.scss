@@ -11,6 +11,7 @@
 @import "./inter";
 
 html {
+  background-color: $theme-accent;
   @media (prefers-color-scheme: dark) {
     background-color: $theme-base;
     color: $theme-accent;
