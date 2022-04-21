@@ -109,7 +109,7 @@ export default () => {
   const past = [
     {
       name: "Julia Furman",
-      type: "Alumn",
+      type: "Alumnus",
       title: "Software Engineer",
       company: "Paypal",
       linkedIn: "https://www.linkedin.com/in/juliafurman/",
@@ -126,7 +126,7 @@ export default () => {
     },
     {
       name: "Henrique Pinto",
-      type: "Alumn",
+      type: "Alumnus",
       title: "Frontend Developer",
       company: "August",
       linkedIn: "https://www.linkedin.com/in/henrique-pinto-27617aa2/",
