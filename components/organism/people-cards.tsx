@@ -57,7 +57,7 @@ export const PeopleCards: FC<IProps> = ({ people }) => {
                 </Link>
               )}
               {email && (
-                <Link href={`${email}`}>
+                <Link href={`mailto:${email}`}>
                   <a
                     className="mr-4 hover:text-theme-accent dark:hover:text-theme-base"
                     target="_blank"
