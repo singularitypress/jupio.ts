@@ -92,7 +92,11 @@ export default () => {
           developing human centric design with a focus on accessibility and
           strong brand aesthetics. See more about me{" "}
           <Link href="https://amypandya.vercel.app/">
-            <a className="border-b-2 border-dotted transition-all duration-500 border-theme-base dark:border-theme-accent hover:border-transparent hover:dark:border-transparent">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-b-2 border-dotted transition-all duration-500 border-theme-base dark:border-theme-accent hover:border-transparent hover:dark:border-transparent"
+            >
               here <i className="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </Link>
