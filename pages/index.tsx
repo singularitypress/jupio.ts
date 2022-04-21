@@ -2,6 +2,7 @@ import React, { NextPage } from "next";
 import { Container, Header } from "@components/atomic";
 import Head from "next/head";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -37,11 +38,21 @@ const Home: NextPage = () => {
               </Header>
             </div>
             <div className="home__content md:pl-16 flex items-center transition-all -translate-y-10 opacity-0 duration-500">
-              We are political nerds. We are media geeks. We are storytellers
-              who believe information should be free, accessible, and easy to
-              understand. Our experience in politics, web development and design
-              means you'll find both our expertise and enthusiasm for what we do
-              refreshing (and occasionally a little quirky).
+              <p>
+                We are political nerds. We are media geeks. We are storytellers
+                who believe information should be free, accessible, and easy to
+                understand. Our experience in politics, web development and
+                design means you'll find both our expertise and enthusiasm for
+                what we do refreshing (and occasionally a little quirky).{" "}
+                <Link href="/about-us">
+                  <a className="border-b-2 border-dotted transition-all duration-500 border-theme-base dark:border-theme-accent hover:border-transparent hover:dark:border-transparent">
+                    <strong>
+                      Learn more about us{" "}
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </strong>
+                  </a>
+                </Link>
+              </p>
             </div>
           </div>
         </Container>

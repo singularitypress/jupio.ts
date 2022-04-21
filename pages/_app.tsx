@@ -16,12 +16,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         items={[
           {
             label: "About Us",
-            href: "/about",
+            href: "/about-us",
           },
-          {
-            label: "Our Work",
-            href: "/our-work",
-          },
+          // {
+          //   label: "Our Work",
+          //   href: "/our-work",
+          // },
           {
             label: "Contact Us",
             href: "mailto:hello@jaypandya.co",

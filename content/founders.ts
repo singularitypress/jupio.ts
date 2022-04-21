@@ -1,49 +1,24 @@
+import React from "react";
+
 export const FOUNDERS = [
   {
     name: "Herlander Pinto",
-    company: {
-      title: "Senior Software Developer",
-      company: "Shopify",
-    },
-    contact: {
-      LinkedIn: "https://www.linkedin.com/in/hdpinto",
-      Email: "hdpinto@outlook.com",
-    },
+    title: "Senior Software Developer",
+    company: "Shopify",
   },
   {
     name: "Jay Pandya",
-    company: {
-      title: "Senior Software Engineer",
-      company: "Amazon",
-    },
-    contact: {
-      LinkedIn: "https://linkedin.com/in/jaypandya",
-      Github: "https://github.com/singularitypress",
-      Email: "hello@jaypandya.co",
-    },
+    title: "Senior Software Engineer",
+    company: "Amazon",
   },
   {
     name: "Kassim Wais",
-    company: {
-      title: "Project Manager",
-      company: "Ubisoft",
-    },
-    contact: {
-      LinkedIn: "https://www.linkedin.com/in/kassim-wais-b5135125/",
-      Github: "https://github.com/kassimwais",
-      Email: "waiskassim@gmail.com",
-    },
+    title: "Project Manager",
+    company: "Ubisoft",
   },
   {
     name: "Sushil Tailor",
-    company: {
-      title: "Senior Software Engineer",
-      company: "Microsoft",
-    },
-    contact: {
-      LinkedIn: "https://www.linkedin.com/in/sushil-tailor",
-      Github: "https://github.com/sashimii",
-      Email: "sushil.tailor@gmail.com",
-    },
+    title: "Senior Software Engineer",
+    company: "Microsoft",
   },
 ];
