@@ -8,11 +8,7 @@ export default ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Nav
-        logo={
-          <Link href="/">
-            <a className="font-bold">Jupio</a>
-          </Link>
-        }
+        logo="Jupio"
         items={[
           {
             label: "About Us",

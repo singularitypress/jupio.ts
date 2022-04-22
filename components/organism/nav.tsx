@@ -1,9 +1,9 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { Container } from "@components/atomic";
 
 interface IProps {
-  logo: JSX.Element;
+  logo: ReactNode;
   items: {
     label: string;
     href: string;
@@ -36,7 +36,11 @@ export const Nav = ({ logo, items }: IProps) => {
       >
         <Container>
           <div className="flex flex-col md:flex-row h-full justify-center md:place-content-between">
-            {logo}
+            <Link href="/">
+              <a className="font-bold" onClick={() => setOpen(false)}>
+                {logo}
+              </a>
+            </Link>
             <ul className="flex flex-col md:flex-row place-content-between mt-8 md:mt-0">
               {items.map(({ label, href, type = "link" }) => (
                 <li key={href} className="mb-8 md:mb-0">
