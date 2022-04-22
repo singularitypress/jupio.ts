@@ -1,24 +1,13 @@
 import React, { NextPage } from "next";
-import { Container, Header } from "@components/atomic";
 import Head from "next/head";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
+import { sequentialFadeIn } from "@util";
+import { Container, Header } from "@components/atomic";
 
 const Home: NextPage = () => {
   useEffect(() => {
-    setTimeout(() => {
-      document.querySelector(".home__heading")?.classList.remove("opacity-0");
-      document
-        .querySelector(".home__heading")
-        ?.classList.remove("-translate-y-10");
-    }, 500);
-
-    setTimeout(() => {
-      document.querySelector(".home__content")?.classList.remove("opacity-0");
-      document
-        .querySelector(".home__content")
-        ?.classList.remove("-translate-y-10");
-    }, 1000);
+    sequentialFadeIn("load");
   }, []);
 
   return (
@@ -26,18 +15,18 @@ const Home: NextPage = () => {
       <Head>
         <title>Home</title>
       </Head>
-      <div className="relative h-screen w-screen flex flex-col justify-center">
+      <div className="relative h-screen w-full flex flex-col justify-center">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
             <div className="flex items-center mb-8 md:mb-0">
               <Header
                 variant="h1"
-                className="home__heading transition-all -translate-y-10 opacity-0 duration-500 lg:text-9xl"
+                className="load transition-all -translate-y-10 opacity-0 duration-500 lg:text-9xl"
               >
                 Jupio Labs
               </Header>
             </div>
-            <div className="home__content md:pl-16 flex items-center transition-all -translate-y-10 opacity-0 duration-500">
+            <div className="load md:pl-16 flex items-center transition-all -translate-y-10 opacity-0 duration-500">
               <p>
                 We are political nerds. We are media geeks. We are storytellers
                 who believe information should be free, accessible, and easy to

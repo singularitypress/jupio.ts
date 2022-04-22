@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { Nav } from "@components/organism";
+import { Footer, Nav } from "@components/organism";
 import Link from "next/link";
 
 import "../styles/globals.scss";
@@ -26,6 +26,7 @@ export default ({ Component, pageProps }: AppProps) => {
         ]}
       />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 };

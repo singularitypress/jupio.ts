@@ -1,1 +1,2 @@
-export * from "./founders";
+export * from "./people";
+export * from "./work-history";

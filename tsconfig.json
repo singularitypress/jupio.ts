@@ -25,6 +25,9 @@
       ],
       "@content": [
         "./content"
+      ],
+      "@util": [
+        "./util"
       ]
     }
   },
