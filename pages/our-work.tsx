@@ -2,7 +2,7 @@ import { Container, Header } from "@components/atomic";
 import { WORK_HISTORY } from "@content";
 import { sequentialFadeIn } from "@util";
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 
 export default () => {
   useEffect(() => {
@@ -30,12 +30,12 @@ export default () => {
             </div>
             <div className="load transition-all -translate-y-10 opacity-0 duration-500 md:border-t-2 border-theme-base dark:border-theme-accent md:pt-8">
               {WORK_HISTORY.map((item) => (
-                <>
+                <Fragment key={item.header}>
                   <Header variant="h4" className="mb-4">
                     {item.header}
                   </Header>
                   <p className="mb-8">{item.description}</p>
-                </>
+                </Fragment>
               ))}
             </div>
           </div>

@@ -12,7 +12,7 @@
 
 html {
   background-color: $theme-accent;
-  @media (prefers-color-scheme: dark) {
+  &.dark {
     background-color: $theme-base;
     color: $theme-accent;
   }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { ReactNode, useState } from "react";
+import React, { Dispatch, ReactNode, SetStateAction, useState } from "react";
 import { Container } from "@components/atomic";
 
 interface IProps {
@@ -9,9 +9,11 @@ interface IProps {
     href: string;
     type?: "button" | "link";
   }[];
+  theme: string;
+  setTheme: Dispatch<SetStateAction<string>>;
 }
 
-export const Nav = ({ logo, items }: IProps) => {
+export const Nav = ({ logo, items, theme, setTheme }: IProps) => {
   const [open, setOpen] = useState(false);
 
   const transition = "transition ease-in duration-200";
@@ -56,7 +58,7 @@ export const Nav = ({ logo, items }: IProps) => {
                   ) : (
                     <Link href={href}>
                       <a
-                        className={`${transition} md:ml-8 rounded-fill px-4 py-2 rounded-full font-bold border-2 bg-theme-base border-theme-base text-theme-accent hover:bg-transparent hover:text-theme-base dark:bg-theme-accent dark:border-theme-accent dark:text-theme-dp04 dark:hover:text-theme-accent`}
+                        className={`${transition} md:ml-8 rounded-fill px-4 py-2 rounded-full font-bold border-2 bg-theme-base border-theme-base text-theme-accent hover:bg-transparent hover:text-theme-base dark:bg-theme-accent dark:border-theme-accent dark:text-theme-base dark:hover:bg-theme-base dark:hover:text-theme-accent`}
                         onClick={() => setOpen(false)}
                       >
                         {label}
@@ -65,6 +67,21 @@ export const Nav = ({ logo, items }: IProps) => {
                   )}
                 </li>
               ))}
+              <li>
+                <button
+                  className="md:ml-8 cursor-pointer"
+                  onClick={() => {
+                    setTheme(theme === "dark" ? "light" : "dark");
+                  }}
+                >
+                  {theme === "dark" ? (
+                    <i className="fa-solid fa-moon text-lg"></i>
+                  ) : (
+                    <i className="fa-solid fa-sun text-lg"></i>
+                  )}
+                  {/* <span className="sr-only">{theme} mode, click to switch</span> */}
+                </button>
+              </li>
             </ul>
           </div>
         </Container>
