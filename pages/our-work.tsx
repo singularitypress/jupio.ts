@@ -26,7 +26,7 @@ export default () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-32">
             <div className="load transition-all -translate-y-10 opacity-0 duration-500 mb-8 md:mb-0 md:text-right md:border-t-2 border-theme-base dark:border-theme-accent pt-8">
-              <Header variant="h4">Jupio Labs</Header>
+              <Header variant="h4">Collective Projects</Header>
             </div>
             <div className="load transition-all -translate-y-10 opacity-0 duration-500 md:border-t-2 border-theme-base dark:border-theme-accent md:pt-8">
               {WORK_HISTORY.map((item) => (

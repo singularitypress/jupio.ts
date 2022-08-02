@@ -17,7 +17,7 @@ interface IProps {
 
 export const PeopleCards: FC<IProps> = ({ people }) => {
   const urlProps: AnchorHTMLAttributes<HTMLAnchorElement> = {
-    className: "mr-4 hover:text-theme-accent dark:hover:text-theme-base",
+    className: "mr-4 inline-block transition-all hover:-translate-y-1",
     target: "_blank",
     rel: "noreferrer noopener",
   };
