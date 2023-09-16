@@ -23,7 +23,7 @@ export const PEOPLE_PRESENT = [
     name: "Herlander Pinto",
     type: "Founder",
     title: "Senior Software Developer",
-    company: "Shopify",
+    company: "Jobber",
     linkedIn: "https://www.linkedin.com/in/hdpinto",
     email: "hdpinto@outlook.com",
     bio: (
@@ -55,8 +55,8 @@ export const PEOPLE_PRESENT = [
   {
     name: "Kassim Wais",
     type: "Founder",
-    title: "Project Manager",
-    company: "Ubisoft",
+    title: "Senior Project Manager",
+    company: "Klick",
     linkedIn: "https://www.linkedin.com/in/kassim-wais-b5135125/",
     github: "https://github.com/kassimwais",
     email: "waiskassim@gmail.com",

@@ -6,10 +6,10 @@ export const Footer: FC = () => {
     <footer className="py-16">
       <Container className="flex flex-col justify-center items-center">
         <p>
-          <small>Made with ❤️ by Jupio Labs</small>
+          <small>Made with ❤️ by Jupio Media Inc.</small>
         </p>
         <p>
-          <small>2022</small>
+          <small>2023</small>
         </p>
       </Container>
     </footer>
