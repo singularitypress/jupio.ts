@@ -90,35 +90,7 @@ export const PEOPLE_PRESENT = [
         campaigns in social media. Secret Level II security clearance.
       </>
     ),
-  },
-  {
-    name: "Amy Pandya",
-    type: "Intern/ Apprentice",
-    title: "Intern",
-    company: "Jupio Labs",
-    linkedIn: "https://www.linkedin.com/in/amy-pandya-03282211b/",
-    github: "https://github.com/amypands",
-    email: "amykpandya@gmail.com",
-    misc: "https://amypandya.vercel.app/",
-    bio: (
-      <>
-        I'm a web developer based in Toronto and am looking to work with other
-        teams to build high quality websites. I am highly interested in
-        developing human centric design with a focus on accessibility and strong
-        brand aesthetics. See more about me{" "}
-        <Link href="https://amypandya.vercel.app/">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-b-2 border-dotted transition-all duration-500 border-theme-base dark:border-theme-accent hover:border-transparent hover:dark:border-transparent"
-          >
-            here <i className="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </Link>
-        .
-      </>
-    ),
-  },
+  }
 ];
 
 export const PEOPLE_PAST = [
@@ -151,6 +123,34 @@ export const PEOPLE_PAST = [
         Reactjs/Nextjs/Gastbyjs/Node-Express Web Developer with computer science
         fundamentals background. Open to software development positions. Passion
         for music production, Data collection and related technologies.
+      </>
+    ),
+  },
+  {
+    name: "Amy Pandya",
+    type: "Alumnus",
+    title: "Web Content Manager",
+    company: "Scotiabank",
+    linkedIn: "https://www.linkedin.com/in/amy-pandya-03282211b/",
+    github: "https://github.com/amypands",
+    email: "amykpandya@gmail.com",
+    misc: "https://amypandya.vercel.app/",
+    bio: (
+      <>
+        I'm a web developer based in Toronto and am looking to work with other
+        teams to build high quality websites. I am highly interested in
+        developing human centric design with a focus on accessibility and strong
+        brand aesthetics. See more about me{" "}
+        <Link href="https://amypandya.vercel.app/">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-b-2 border-dotted transition-all duration-500 border-theme-base dark:border-theme-accent hover:border-transparent hover:dark:border-transparent"
+          >
+            here <i className="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </Link>
+        .
       </>
     ),
   },

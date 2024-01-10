@@ -9,7 +9,7 @@ export const Footer: FC = () => {
           <small>Made with ❤️ by Jupio Media Inc.</small>
         </p>
         <p>
-          <small>2023</small>
+          <small>2024</small>
         </p>
       </Container>
     </footer>
